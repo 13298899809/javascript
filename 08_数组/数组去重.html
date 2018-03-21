@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var array = [1,2,3,1];
+        /*遍历数组*/
+        var length = array.length;
+        for (var i = 0; i < length; i++) {
+            /*从数组的i+1个元素开始遍历
+            * 也就是1 和 234567899相比  看看是否有重复的数据*/
+            for (var j = i + 1; j < length; j++) {
+                // document.write(array[j]);
+                /*判断两个元素是否相等*/
+                if (array[i] == array[j]) {
+                    /*如果出现相同的元素 则删除j对应的元素*/
+                    array.splice(i, 1);
+                    /*当删除当前j所在的元素之后,后面的元素会自动补位
+                    * 此时将不会出现该元素,需要再比较一次j所在的元素的位置
+                    * 为了不让j变化  这里做了一次j--*/
+                    length--;
+                    j--;
+                }
+            }
+            document.write('</br>');
+        }
+        document.write(array);
+    </script>
+</head>
+<body>
+</body>
+</html>
