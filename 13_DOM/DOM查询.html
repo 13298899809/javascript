@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            /**
+             * 1 查询id 为 btn1 的节点
+             * .innerHTML 获取文本
+             * @type {string}
+             */
+            var btn1 = document.getElementById('btn1').innerHTML;
+            console.log(btn1);
+            /**
+             * 查询li 的所有节点
+             */
+            var li1 = document.getElementsByTagName('li');
+            var li2 = document.getElementsByTagName('li')[0].innerHTML;
+            console.log(li1);
+            console.log(li2);
+            var btn3 = document.getElementById('btn3');
+            btn3.onclick = function btn3() {
+             var btn33 = document.getElementsByName('in1');
+                var result3 = 0;
+             for (var i1 = 0;i1<btn33.length;i1++){
+                   result3 = parseInt(btn33[i1].value)+parseInt(result3);
+             }
+            console.log(parseInt(result3));
+            }
+
+        }
+    </script>
+</head>
+<body>
+<button id="btn1">btn1</button>
+<ol>
+    <li>Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+<input type="text" name="in1"/>
+<input type="text" name="in1"/>
+<input type="button" value="获取name等于in1的值的和" id="btn3"/>
+</body>
+</html>

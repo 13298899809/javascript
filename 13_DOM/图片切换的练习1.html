@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .photo{
+            width: 500px;
+            height: 500px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+<div class="photo">
+    <img src="img/01.jpg" id="img"/>
+    <input type="button" value="上一张" id="up" onclick="up()">
+<input type="button" value="下一张" id="down" onclick="down()">
+</div>
+<script>
+    function down() {
+        var base = 'http://localhost:63342/javascript/13_DOM/img/';
+       var arr = [base+'01.jpg',base+'02.jpg',base+'03.jpg',base+'04.jpg',base+'05.jpg'];
+       var img =  document.getElementById('img').src;
+       for (var i = 0;i<arr.length;i++){
+           if(img.indexOf(arr[i])){
+            if(arr[i]==arr.length){
+                arr[i]=arr[0];
+            }
+            console.log(img);
+            console.log(arr[i])
+                img = arr[i];
+               return null;
+           }
+       }
+
+    }
+    function up() {
+        alert('上一张');
+    }
+</script>
+</body>
+</html>

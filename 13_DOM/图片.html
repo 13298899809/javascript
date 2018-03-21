@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>幻灯片</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    #pic{
+        width:600px;
+        height:400px;
+    }
+</style>
+<body>
+<div id="picBox">
+    <img src="img/01.jpg" id="pic">
+    <input type="button" value="上一张" onclick="pre();">
+    <input type="button" value="下一张" onclick="next();">
+</div>
+<script>
+    var picArr = new Array("img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg");
+    var index = 0;
+
+    function next() {
+        index++;
+        if (index == picArr.length) {
+            index = 0;
+        }
+        console.log(document.getElementById("pic").src);
+        console.log(picArr[index]);
+        document.getElementById("pic").src = picArr[index];
+        console.log(document.getElementById("pic").src);
+        console.log(picArr[index]);
+    }
+
+    function pre() {
+        index--;
+        if (index < 0) {
+            index = picArr.length - 1;
+        }
+        document.getElementById("pic").src = picArr[index];
+    }
+</script>
+</body>
+</html>
