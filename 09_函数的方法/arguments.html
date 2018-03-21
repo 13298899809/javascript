@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.write('在函数代码中，使用特殊对象 arguments，开发者无需明确指出参数名，就能访问它们' + '</br>');
+
+        function sayhi() {
+            alert('arguments.length:' + arguments.length);
+            for (var i = 0;i<arguments.length;i++){
+                alert(arguments[i]);
+            }
+            if (arguments[0] == 'bye') {
+                alert('arguments[0] ==' + ' bye');
+            }
+            document.write('当前执行的函数:'+arguments.callee);
+        }
+
+        sayhi('bye','hi');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
