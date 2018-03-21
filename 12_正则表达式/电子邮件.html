@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /**
+         * 电子邮件
+         * hello . wujian @  abc .com.cn
+         * 任意字母数字下划线  .任意字母数字下划线 @ 任意字母数字 . 任意字母数字(2-5位) .任意字母（2-5位）
+         * \w{3+} （\.\w+）*  @  [A-z0-9]+   (\.[A-z]{2,5}){1,2}
+         * \w{3,} （\.\w+）*  @  [A-z0-9]+   (\.[A-z]{2,5}){1,2}
+         */
+        var regMail = /\w{3,}(\.\w+)*@[A-z0-9]+(\.[A-z]{2,5}){1,2}/;
+
+        function checkEmail() {
+            var email = document.getElementById('email').value;
+            var res = regMail.test(email);
+            if (res == true) {
+                document.getElementById('checkEmail').innerText = '合法';
+            } else {
+                document.getElementById('checkEmail').innerHTML = '不合法';
+            }
+        }
+    </script>
+</head>
+<body>
+电子邮箱 :<input type="text" id="email" onblur="checkEmail()"/>
+<span id="checkEmail">请输入合法的邮箱</span>
+</body>
+</html>
