@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.write('JS字符串长度判断,超出进行自动截取的实例(支持中文)</br>');
+        var a = '谁在悬崖沏一壶茶,温热前世的牵挂';
+        if (a.length > 10) {
+            a = a.substr(0, 10) + '...';
+        }
+        document.write(a);
+        document.write('</br>');
+        document.write('把一个字符串分割成字符串数组</br>');
+        var b = '张三 李四 王五';
+        var temp_b = b.split(' ');
+        for (var bb = 0; bb < temp_b.length; bb++) {
+            document.write(temp_b[bb]);
+        }
+        document.write('</br>');
+    </script>
+</head>
+<body>
+
+</body>
+</html>
