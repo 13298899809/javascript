@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var a = (function () {
+            var now = new Date();
+            var year = now.getFullYear();
+            var mouth = now.getMonth();
+            var day = now.getDay();
+            var hour = now.getHours();
+            var min = now.getMinutes();
+            var s = now.getSeconds();
+            return year + '年' + mouth + '月' + day + '日' + hour + '时' + min + '分' + s + '秒';
+        })()
+        document.write(a);
+
+        function b() {
+            var now = new Date();
+            var year = now.getFullYear();
+            var mouth = now.getMonth();
+            var day = now.getDay();
+            var hour = now.getHours();
+            var min = now.getMinutes();
+            var s = now.getSeconds();
+            return year + '年' + mouth + '月' + day + '日' + hour + '时' + min + '分' + s + '秒';
+        }
+        document.write(b());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

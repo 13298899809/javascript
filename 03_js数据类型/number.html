@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*字符串类型中的单引号与双引号的作用效果完全一样。*/
+        var a = '123';
+        var b = 123;
+        alert(a);
+        alert(b);
+        alert(typeof a);
+        alert(typeof b);
+        /*308位*/
+        alert(Number.MAX_VALUE);
+        var c = 1.00;
+        alert(c);
+        var d = 'a'
+        /*NaN:非数字类型。特点：① 涉及到的 任何关于NaN的操作，都会返回NaN   ② NaN不等于自身。*/;
+        alert(d*2);
+        /*isNaN()函数，用于判断是否是一个非数字类型。如果传入的参数是一个非数字类型，那么返回true；否则返回false;*/
+        alert(isNaN(c));
+        alert(isNaN(d));
+        alert(10/3);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

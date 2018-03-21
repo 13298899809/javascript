@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        /*转数字*/
+        var a = '12580.10011';
+        var aa = Number(a);
+        var aaa = parseInt(a);
+        var aaaa = parseFloat(a);
+        console.log(typeof a+"  "+a);
+        /**
+         * a) 如果转换的内容本身就是一个数值类型的字符串，那么将来在转换的时候会返回自己。
+         * b) 如果转换的内容本身不是一个数值类型的字符串，那么在转换的时候结果是NaN.
+         * c) 如果要转换的内容是空的字符串，那以转换的结果是0.
+         * d) 如果是其它的字符，那么将来在转换的时候结果是NaN.
+         */
+        console.log(typeof aa+"  "+aa);
+        /**
+         * a) 忽略字符串前面的空格，直至找到第一个非空字符,还会将数字后面的非数字的字符串去掉。
+         * b) 如果第一个字符不是数字符号或者负号，返回NaN
+         * c) 会将小数取整。（向下取整）
+         */
+        console.log(typeof aaa+"  "+aaa);
+        /**
+         * 与parseInt一样，唯一区别是parseFloat可以保留小数。
+         */
+        console.log(typeof aaaa+"  "+aaaa);
+        /*转字符串*/
+        var b = 123;
+        var bb = String(b);
+        var bbb = b.toString();
+        console.log(typeof b+"   "+b);
+        console.log(typeof bb+"   "+bb);
+        console.log(typeof bbb+"   "+bbb);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

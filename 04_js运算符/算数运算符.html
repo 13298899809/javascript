@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        table.dataintable {
+            margin-top:15px;
+            border-collapse:collapse;
+            border:1px solid #aaa;
+            width:100%;
+        }
+
+        table.dataintable th {
+            vertical-align:baseline;
+            padding:5px 15px 5px 6px;
+            background-color:#3F3F3F;
+            border:1px solid #3F3F3F;
+            text-align:left;
+            color:#fff;
+        }
+
+        table.dataintable td {
+            vertical-align:text-top;
+            padding:6px 15px 6px 6px;
+            border:1px solid #aaa;
+        }
+
+        table.dataintable tr:nth-child(odd) {
+            background-color:#F5F5F5;
+        }
+
+        table.dataintable tr:nth-child(even) {
+            background-color:#fff;
+        }
+
+        table.dataintable pre {
+            width:auto;
+            margin:0;
+            padding:0;
+            border:0;
+            background-color:transparent;
+        }
+
+        table.dataintable p {margin:0 0 2px 0;}
+    </style>
+</head>
+<body>
+<div class="box">
+    <table class="dataintable">
+        <tr>
+            <th>运算符</th>
+            <th>描述</th>
+            <th style="width: 100px">例子</th>
+            <th>结果</th>
+        </tr>
+
+        <tr>
+            <td>+</td>
+            <td>加</td>
+            <td>x=y+2</td>
+            <td>x=7</td>
+        </tr>
+
+        <tr>
+            <td>-</td>
+            <td>减</td>
+            <td>x=y-2</td>
+            <td>x=3</td>
+        </tr>
+
+        <tr>
+            <td>*</td>
+            <td>乘</td>
+            <td>x=y*2</td>
+            <td>x=10</td>
+        </tr>
+
+        <tr>
+            <td>/</td>
+            <td>除</td>
+            <td>x=y/2</td>
+            <td>x=2.5</td>
+        </tr>
+
+        <tr>
+            <td>%</td>
+            <td>求余数 (保留整数)</td>
+            <td>x=y%2</td>
+            <td>x=1</td>
+        </tr>
+
+        <tr>
+            <td>++</td>
+            <td>累加</td>
+            <td>x=++y</td>
+            <td>x=6
+            </td>
+        </tr>
+
+        <tr>
+            <td>--</td>
+            <td>递减</td>
+            <td>x=--y</td>
+            <td>x=4
+            </td>
+        </tr>
+    </table>
+    <table class="dataintable">
+
+        <tr>
+            <th>运算符</th>
+            <th>例子</th>
+            <th>等价于</th>
+            <th>结果</th></tr>
+
+        <tr>
+            <td>=</td>
+            <td>x=y</td>
+            <td>&nbsp;</td>
+            <td>x=5</td>
+        </tr>
+
+        <tr>
+            <td>+=</td>
+            <td>x+=y</td>
+            <td>x=x+y</td>
+            <td>x=15</td>
+        </tr>
+
+        <tr>
+            <td>-=</td>
+            <td>x-=y</td>
+            <td>x=x-y</td>
+            <td>x=5</td>
+        </tr>
+
+        <tr>
+            <td>*=</td>
+            <td>x*=y</td>
+            <td>x=x*y</td>
+            <td>x=50</td>
+        </tr>
+
+        <tr>
+            <td>/=</td>
+            <td>x/=y</td>
+            <td>x=x/y</td>
+            <td>x=2</td>
+        </tr>
+
+        <tr>
+            <td>%=</td>
+            <td>x%=y</td>
+            <td>x=x%y</td>
+            <td>x=0</td>
+        </tr>
+
+    </table>
+
+</div>
+</body>
+</html>

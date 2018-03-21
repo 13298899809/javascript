@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--suppress ALL -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        for (var a = 1; a <= 10; a++) {
+            if (a == 8) {
+                break;
+            }
+            document.write('break:'+a+'<br/>');
+            document.write('break:当i=8的时候，直接退出for这个循环。这个循环将不再被执行！<br/>');
+        }
+        for (var a = 1; a <= 10; a++) {
+            if (a == 8) {
+                continue;
+            }
+            document.write('continue:'+a+'<br/>');
+            document.write('continue:当i=8的时候，直接跳出本次for循环。下次继续执行<br/>');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

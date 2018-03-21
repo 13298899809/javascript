@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var arr1 = new Array();
+        arr1[0] = '孙悟空';
+        arr1[1] = '猪八戒';
+        arr1[2] = '唐僧';
+        arr1[3] = '沙和尚';
+        arr1[4] = '小白龙';
+        var arr2 = new Array('罗贯中','施耐庵','吴承恩','曹雪芹');
+        var arr3 = new Array();
+        arr3[0]=0;
+        arr3[1]=1;
+        arr3[2]=2;
+        arr3[3]=3;
+        arr3[4]=4;
+        arr3[5]=5;
+        var arr4 = new Array(6)
+        arr4[0] = "George"
+        arr4[1] = "John"
+        arr4[2] = "Thomas"
+        arr4[3] = "James"
+        arr4[4] = "Adrew"
+        arr4[5] = "Martin"
+        document.write('concat()</br>');
+        document.write('语法:arrayObject.concat(arrayX,arrayX,......,arrayX)</br>');
+        document.write('返回值:返回一个新的数组。该数组是通过把所有 arrayX 参数添加到 arrayObject 中生成的。' +
+            '如果要进行 concat() 操作的参数是数组，那么添加的是数组中的元素，而不是数组。</br>');
+        document.write(arr1.concat(arr2)+'</br>');
+        document.write('join()'+'</br>');
+        document.write('语法:arrayObject.join(separator)'+'</br>');
+        document.write('返回值:返回一个字符串。该字符串是通过把 arrayObject 的每个元素转换为字符串，' +
+            '然后把这些字符串连接起来，在两个元素之间插入 separator 字符串而生成的。'+'</br>');
+        document.write(arr1.join('0.0')+'</br>');
+        var i;
+        for(i=0;i<arr1.size;i++){
+        document.write(arr1[i]+'</br>');
+        }
+        document.write('push()</br>');
+        document.write('语法:arrayObject.push(newelement1,newelement2,....,newelementX)</br>');
+        document.write('返回值:把指定的值添加到数组后的新长度。</br>');
+        arr2.push('小鸭梨');
+        document.write(arr2+'</br>');
+        document.write('pop()</br>');
+        document.write('语法:arrayObject.pop()</br>');
+        document.write('返回值:arrayObject 的最后一个元素。</br>');
+        document.write(arr3+'</br>');
+        document.write(arr3.pop()+'</br>');
+        document.write(arr3+'</br>');
+        document.write('reverse()</br>');
+        document.write('语法:arrayObject.reverse()</br>');
+        document.write('说明:reverse() 方法用于颠倒数组中元素的顺序。</br>');
+        document.write(arr3+'</br>');
+        document.write(arr3.reverse()+'</br>');
+        document.write('slice()</br>');
+        document.write('语法:arrayObject.slice(start,end)</br>');
+        document.write('返回值:返回一个新的数组，包含从 start 到 end ' +
+            '（不包括该元素）的 arrayObject 中的元素.</br>');
+        document.write(arr3+'</br>');
+        document.write(arr3.slice(2,4)+'</br>');
+        document.write('splice() 方法向/从数组中添加/删除项目，然后返回被删除的项目。\n</br>');
+        document.write('语法:arrayObject.splice(index,howmany,item1,.....,itemX)</br>');
+        document.write('说明:splice() 方法可删除从 index 处开始的零个或多个元素，' +
+            '并且用参数列表中声明的一个或多个值来替换那些被删除的元素。' +
+            '如果从 arrayObject 中删除了元素，则返回的是含有被删除的元素的数组。\n</br>');
+        document.write('在本例中我们将删除从 index 2 ("Thomas") 开始的三个元素，' +
+            '并添加一个新元素 ("William") 来替代被删除的元素：\n'+'</br>');
+        arr4.splice(2,3,'张三');
+        document.write(arr4+'</br>');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
