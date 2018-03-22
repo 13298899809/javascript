@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .box1 {
+            width: 500px;
+            height: 200px;
+            background-color: #aaaaaa;
+            float: left;
+        }
+
+        .box2 {
+            width: 500px;
+            height: 200px;
+            background-color: #bbffaa;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+<div class="box1" id="box1" onmouseover="mouse1(event)" onmousemove="move1(event)" onmouseout="out1()"></div>
+<div class="box2" id="box2"></div>
+<script>
+    /**
+     * 当鼠标在box1中移动时，在box2中显示鼠标的坐标
+     */
+    var box2 = document.getElementById('box2');
+    var dom = document.createElement('span');
+
+    function mouse1() {
+        box2.innerHTML = 'ready?';
+        dom.innerHTML = '鼠标移入';
+        box2.appendChild(dom);
+    }
+
+    function out1() {
+        dom.innerHTML = '鼠标移出';
+        box2.appendChild(dom);
+    }
+
+    function move1() {
+        x = event.screenX;
+        y = event.screenY;
+        dom.innerHTML = '横坐标:' + x;
+        dom.innerHTML = '纵坐标:' + y;
+        box2.appendChild(dom);
+    }
+</script>
+</body>
+</html>
