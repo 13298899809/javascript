@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="box">
+    <input type="button" value="增加p文本" onclick="addP()">
+</div>
+<script>
+    function addP() {
+        /**
+         *  1 拿到父级节点
+         * @type {HTMLElement | null}
+         */
+        var div = document.getElementById('box');
+        /**
+         * 2 创建元素节点
+         * @type {HTMLParagraphElement}
+         */
+        var newp = document.createElement('p');
+        /**
+         * 3 创建文本节点
+         * @type {Text}
+         */
+        var text = document.createTextNode('i am yours');
+        /**
+         * 4 往元素中添加文本节点
+         */
+        newp.appendChild(text);
+        /**
+         * 将newp 添加至div中
+         */
+        div.appendChild(newp);
+    }
+
+</script>
+</body>
+</html>

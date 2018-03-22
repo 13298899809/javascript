@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input class="btn" type="button" value="增加一条，放在前面"/>
+<input class="btn" type="button" value="删除最后一条"/>
+<input class="btn" type="button" value="修改最后一条"/>
+<input class="btn" type="button" value="复制第一条"/>
+<input class="btn" type="button" value="设置样式"/>
+<table border="1" cellspacing="0" cellpadding="10">
+    <thead>
+    <tr>
+        <th>书籍</th>
+        <th>价格</th>
+    </tr>
+    </thead>
+    <tbody id="bookCon">
+    <tr>
+        <td id="tr1">第八条猎狗</td>
+        <td>¥22</td>
+    </tr>
+    <tr>
+        <td>不抱怨的世界</td>
+        <td>¥22</td>
+    </tr>
+    </tbody>
+</table>
+<script>
+    var arrInputBtn = document.getElementsByClassName("btn");
+    var bookCon = document.getElementsByTagName("tbody")[0];
+
+    //add    增加一条，放在倒数第二的位置即放在length-1的前面
+    arrInputBtn[0].onclick = function () {
+        var newTr = document.createElement("tr");
+        newTr.innerHTML = "  <td>活着</td>   <td>¥22</td> ";
+        bookCon.insertBefore(newTr, bookCon.children[0])
+    }
+
+    //del 删除最后一个即删除tr下标为length-1
+    arrInputBtn[1].onclick = function () {
+        if (bookCon.children[bookCon.children.length - 1])
+            bookCon.removeChild(bookCon.children[bookCon.children.length - 1])
+    }
+
+    //修改最后一个 ：下标为length-1
+    arrInputBtn[2].onclick = function () {
+        if (bookCon.children[bookCon.children.length - 1]) {
+            var newTr = document.createElement("tr");
+            newTr.innerHTML = "  <td>走着走着就老了</td>   <td>¥22</td> ";
+            bookCon.replaceChild(newTr, bookCon.children[bookCon.children.length - 1])
+        }
+    }
+
+    //复制第一条 下标为0
+    arrInputBtn[3].onclick = function () {
+        if (bookCon.children[0]) {
+            var newTr = bookCon.children[0].cloneNode(true);
+            bookCon.insertBefore(newTr, bookCon.children[bookCon.children.length - 1])
+        }
+
+    }
+
+    //样式
+    var colors = ["#faa", "orange", "#ffa", "greenyellow", "#ccc", "#949", "#fff"];
+    var i = 0;
+    arrInputBtn[4].onclick = function () {
+        i %= colors.length;
+        document.getElementsByTagName("table")[0].children[0].children[0].style.background = colors[i];
+        i++;
+    }
+</script>
+</body>
+</html>
