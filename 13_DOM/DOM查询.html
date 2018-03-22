@@ -10,25 +10,68 @@
              * .innerHTML 获取文本
              * @type {string}
              */
+            console.log('1 查询id 为 btn1 的节点');
             var btn1 = document.getElementById('btn1').innerHTML;
             console.log(btn1);
             /**
-             * 查询li 的所有节点
+             * 2 查询li 的所有节点
              */
+            console.log('2 查询li 的所有节点');
             var li1 = document.getElementsByTagName('li');
             var li2 = document.getElementsByTagName('li')[0].innerHTML;
             console.log(li1);
             console.log(li2);
+            /**
+             * 3点击按钮 获取li下的所有输入数据的和
+             * */
+            console.log('3点击按钮 获取li下的所有输入数据的和');
             var btn3 = document.getElementById('btn3');
             btn3.onclick = function btn3() {
-             var btn33 = document.getElementsByName('in1');
+                var btn33 = document.getElementsByName('in1');
                 var result3 = 0;
-             for (var i1 = 0;i1<btn33.length;i1++){
-                   result3 = parseInt(btn33[i1].value)+parseInt(result3);
-             }
-            console.log(parseInt(result3));
+                for (var i1 = 0; i1 < btn33.length; i1++) {
+                    result3 = parseInt(btn33[i1].value) + parseInt(result3);
+                }
+                console.log(parseInt(result3));
             }
-
+            /**
+             * 查询id为city下的所有li节点
+             */
+            var city = document.getElementById('city');
+            var all = document.getElementsByTagName('li');
+            console.log(city.getElementsByTagName('li'));
+            console.log(all);
+            /**
+             * 4 查询id 为city下的所有子节点
+             * ie8 及以下 不会将空白文本当成子节点
+             */
+            console.log('4 查询id 为city下的所有子节点');
+            console.log('长度是:' + city.childNodes.length);
+            for (var c4 = 0; c4 < city.childNodes.length; c4++) {
+                console.log(city.childNodes[c4]);
+            }
+            /**
+             * 5 查询id 为city下的所有子元素
+             */
+            console.log('5 查询id 为city下的所有子元素');
+            console.log('长度是:' + city.children.length);
+            for (var c5 = 0; c5 < city.children.length; c5++) {
+                console.log(city.children[c5]);
+            }
+            /**
+             * 6 查询id 为city下的第一个子节点
+             * firstChild 不支持ie8及以下的浏览器
+             */
+            console.log('6 查询id 为city下的第一个子节点');
+            var first = city.firstChild;
+            console.log('第一个子节点:' + first.innerHTML);
+            /**
+             * 7 返回id为bj的父节点
+             */
+            console.log('7 返回id为bj的父节点');
+            var bj = document.getElementById('bj');
+            var par = bj.parentNode;
+            console.log(par);
         }
     </script>
 </head>
@@ -42,5 +85,10 @@
 <input type="text" name="in1"/>
 <input type="text" name="in1"/>
 <input type="button" value="获取name等于in1的值的和" id="btn3"/>
+<ul id="city">
+    <li id="bj">北京</li>
+    <li>上海</li>
+    <li>广东</li>
+</ul>
 </body>
 </html>
