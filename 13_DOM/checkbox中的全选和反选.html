@@ -7,20 +7,21 @@
 <body>
 <table>
     <tr>
-        <td><input type="checkbox" name="c1">篮球</td>
+        <td><input type="checkbox" name="c1" value="篮球">篮球</td>
     </tr>
     <tr>
-        <td><input type="checkbox" name="c1">足球</td>
+        <td><input type="checkbox" name="c1" value="足球">足球</td>
     </tr>
     <tr>
-        <td><input type="checkbox" name="c1">羽毛球</td>
+        <td><input type="checkbox" name="c1" value="羽毛球">羽毛球</td>
     </tr>
     <tr>
-        <td><input type="checkbox" name="c1">兵乓球</td>
+        <td><input type="checkbox" name="c1" value="兵乓球">兵乓球</td>
     </tr>
 </table>
 <input type="checkbox" name="c0" id="all" value="全选" onclick="change()">全选
 <input type="checkbox" name="r0" id="revcheck" value="反选" onclick="revs()">反选
+<input type="button" name="s0" id="sub" value="提交" onclick="sub()">
 <script>
     //获取checkbox按钮组
     var allpro = document.getElementsByName('c1');
@@ -69,6 +70,19 @@
                     allpro[i].checked = true;
                 }
 
+            }
+        }
+    }
+
+    /**
+     * 数据提交
+     */
+    function sub() {
+        for (var i = 0; i < allpro.length; i++) {
+            if (allpro[i].type == "checkbox") {
+                if (allpro[i].checked == true) {
+                    console.log(allpro[i].value);
+                }
             }
         }
     }
